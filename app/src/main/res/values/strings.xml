@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rollr</string>
+    <string name="action_settings">Settings</string>
+    <string name="buttonQuick">Quick Roll</string>
+    <string name="buttonGame">My Games</string>
+    <string name="titleTextView">Rollr</string>
+
+</resources>
