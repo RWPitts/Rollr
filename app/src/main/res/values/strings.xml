@@ -13,6 +13,7 @@
     <string name="buttonTextD12">D12</string>
     <string name="buttonTextD20">D20</string>
     <string name="textViewQuickRoll">Pick a Die</string>
+    <string name="textButtonMainMenu">Main Menu</string>
 
 
 </resources>

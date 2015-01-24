@@ -13,7 +13,8 @@
         android:text="@string/buttonQuick"
         android:id="@+id/buttonQuick"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickQuickRoll" />
 
     <Button
         android:layout_width="wrap_content"
