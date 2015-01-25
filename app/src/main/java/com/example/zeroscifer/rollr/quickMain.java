@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.Random;
 
 
 public class quickMain extends ActionBarActivity {
@@ -42,5 +45,35 @@ public class quickMain extends ActionBarActivity {
     public void onClickMain(View view) {
         startActivity(new Intent(getApplicationContext(), Rollr.class));
         finish();
+    }
+
+    public int random(int max) {
+
+        Random rn = new Random();
+        return rn.nextInt(max) + 1;
+    }
+
+    public void toastView(View view) {
+        int roll = 0;
+        switch(view.getId()) {
+            case R.id.buttonD2:
+                roll = random(2) - 1;
+                break;
+            case R.id.buttonD4:
+                roll = random(4);
+                break;
+            case R.id.buttonD6:
+                roll = random(6);
+                break;
+            case R.id.buttonD12:
+                roll = random(12);
+                break;
+            case R.id.buttonD20:
+                roll = random(20);
+                break;
+        }
+
+        Toast.makeText(getApplicationContext(), "You rolled: " + roll,
+        Toast.LENGTH_SHORT).show();
     }
 }
