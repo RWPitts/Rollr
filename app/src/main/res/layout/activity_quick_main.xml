@@ -49,16 +49,6 @@
         android:layout_marginBottom="91dp"
         android:onClick="toastView" />
 
-   Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonTextD20"
-        android:id="@+id/buttonD20"
-        android:layout_alignTop="@+id/buttonD12"
-        android:layout_toRightOf="@+id/buttonD4"
-        android:layout_toEndOf="@+id/buttonD4"
-        android:onClick="toastView" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,7 +73,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
+        android:id="@+id/buttonD20"
         android:src="@drawable/d20"
         android:background="@null"
         android:onClick="toastView"
