@@ -7,47 +7,57 @@
     tools:context="com.example.zeroscifer.rollr.quickMain"
     android:background="#ff282828">
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonTextD2"
         android:id="@+id/buttonD2"
-        android:layout_above="@+id/buttonD12"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="42dp"
+        android:src="@drawable/d2"
+        android:background="@null"
         android:onClick="toastView"
-        android:nestedScrollingEnabled="true" />
+        android:nestedScrollingEnabled="true"
+        android:layout_marginBottom="51dp"
+        android:layout_above="@+id/buttonD20"
+        android:layout_toLeftOf="@+id/buttonBack"
+        android:layout_toStartOf="@+id/buttonBack"
+        android:layout_marginRight="37dp"
+        android:layout_marginEnd="37dp" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonTextD4"
         android:id="@+id/buttonD4"
+        android:src="@drawable/d4"
+        android:background="@null"
+        android:onClick="toastView"
         android:layout_alignTop="@+id/buttonD2"
-        android:layout_centerHorizontal="true"
-        android:onClick="toastView" />
+        android:layout_alignLeft="@+id/buttonD12"
+        android:layout_alignStart="@+id/buttonD12" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonTextD6"
         android:id="@+id/buttonD6"
-        android:layout_alignTop="@+id/buttonD4"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="toastView" />
+        android:src="@drawable/d6"
+        android:background="@null"
+        android:onClick="toastView"
+        android:layout_alignBottom="@+id/buttonD4"
+        android:layout_alignRight="@+id/buttonD20"
+        android:layout_alignEnd="@+id/buttonD20" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonTextD12"
         android:id="@+id/buttonD12"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/buttonD4"
-        android:layout_toStartOf="@+id/buttonD4"
-        android:layout_marginBottom="91dp"
-        android:onClick="toastView" />
+        android:src="@drawable/d12"
+        android:background="@null"
+        android:layout_marginBottom="44dp"
+        android:onClick="toastView"
+        android:layout_above="@+id/buttonBack"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -77,8 +87,20 @@
         android:src="@drawable/d20"
         android:background="@null"
         android:onClick="toastView"
-        android:layout_below="@+id/buttonD2"
-        android:layout_toRightOf="@+id/buttonD4"
-        android:layout_toEndOf="@+id/buttonD4" />
+        android:layout_alignBottom="@+id/buttonD12"
+        android:layout_toRightOf="@+id/buttonBack"
+        android:layout_toEndOf="@+id/buttonBack"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonD10"
+        android:src="@drawable/d10b"
+        android:background="@null"
+        android:layout_alignTop="@+id/buttonD12"
+        android:layout_alignRight="@+id/buttonD2"
+        android:layout_alignEnd="@+id/buttonD2" />
 
 </RelativeLayout>
