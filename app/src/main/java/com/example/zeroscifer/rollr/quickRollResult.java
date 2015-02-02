@@ -1,21 +1,33 @@
 package com.example.zeroscifer.rollr;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
 
 
 public class quickRollResult extends ActionBarActivity {
-
+    int die;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quick_roll_result);
+        int value = 0;
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            value = extras.getInt("die");
+        }
+        die = value;
+        random(die);
+        TextView textView = (TextView) this.findViewById(R.id.textResult);
+        textView.setText(String.valueOf(random(value)));
     }
 
 
@@ -46,27 +58,13 @@ public class quickRollResult extends ActionBarActivity {
         return rn.nextInt(max) + 1;
     }
 
-    public void toastView(View view) {
-        int roll = 0;
-        switch(view.getId()) {
-            case R.id.buttonD2:
-                roll = random(2) - 1;
-                break;
-            case R.id.buttonD4:
-                roll = random(4);
-                break;
-            case R.id.buttonD6:
-                roll = random(6);
-                break;
-            case R.id.buttonD12:
-                roll = random(12);
-                break;
-            case R.id.buttonD20:
-                roll = random(20);
-                break;
-        }
+    public void reroll(View view) {
+        TextView textView = (TextView) this.findViewById(R.id.textResult);
+        textView.setText(String.valueOf(random(die)));
+    }
 
-        Toast.makeText(getApplicationContext(), "You rolled: " + roll,
-                Toast.LENGTH_SHORT).show();
+    public void back(View view) {
+        startActivity(new Intent(getApplicationContext(), quickMain.class));
+        finish();
     }
 }

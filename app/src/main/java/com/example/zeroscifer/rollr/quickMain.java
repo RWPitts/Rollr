@@ -43,8 +43,27 @@ public class quickMain extends ActionBarActivity {
     }
 
     public void onClickMain(View view) {
-        Intent Quick = new Intent(getApplicationContext(), Rollr.class);
+        Intent Quick = new Intent(getApplicationContext(), quickRollResult.class);
+        int die = 0;
 
+        switch(view.getId()) {
+            case R.id.buttonD2:
+                die = 2;
+                break;
+            case R.id.buttonD4:
+                die = 4;
+                break;
+            case R.id.buttonD6:
+                die = 6;
+                break;
+            case R.id.buttonD12:
+                die = 12;
+                break;
+            case R.id.buttonD20:
+                die = 20;
+                break;
+        }
+        Quick.putExtra("die", die);
         startActivity(Quick);
         finish();
     }
