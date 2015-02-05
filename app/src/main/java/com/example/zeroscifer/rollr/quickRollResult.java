@@ -6,24 +6,35 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
 
 
-public class quickMain extends ActionBarActivity {
-
+public class quickRollResult extends ActionBarActivity {
+    int die;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quick_main);
+        setContentView(R.layout.activity_quick_roll_result);
+        int value = 0;
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            value = extras.getInt("die");
+        }
+        die = value;
+        random(die);
+        TextView textView = (TextView) this.findViewById(R.id.textResult);
+        textView.setText(String.valueOf(random(value)));
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_quick_main, menu);
+        getMenuInflater().inflate(R.menu.menu_quick_roll_result, menu);
         return true;
     }
 
@@ -41,32 +52,19 @@ public class quickMain extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public int random(int max) {
 
-    public void onClickMain(View view) {
-        Intent Quick = new Intent(getApplicationContext(), quickRollResult.class);
-        int die = 0;
-
-        switch(view.getId()) {
-            case R.id.buttonD2:
-                die = 2;
-                break;
-            case R.id.buttonD4:
-                die = 4;
-                break;
-            case R.id.buttonD6:
-                die = 6;
-                break;
-            case R.id.buttonD12:
-                die = 12;
-                break;
-            case R.id.buttonD20:
-                die = 20;
-                break;
-        }
-        Quick.putExtra("die", die);
-        startActivity(Quick);
-        finish();
+        Random rn = new Random();
+        return rn.nextInt(max) + 1;
     }
 
+    public void reroll(View view) {
+        TextView textView = (TextView) this.findViewById(R.id.textResult);
+        textView.setText(String.valueOf(random(die)));
+    }
 
+    public void back(View view) {
+        startActivity(new Intent(getApplicationContext(), quickMain.class));
+        finish();
+    }
 }

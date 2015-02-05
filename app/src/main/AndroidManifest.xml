@@ -20,6 +20,10 @@
             android:name=".quickMain"
             android:label="@string/title_activity_quick_main" >
         </activity>
+        <activity
+            android:name=".quickRollResult"
+            android:label="@string/title_activity_quick_roll_result" >
+        </activity>
     </application>
 
 </manifest>
