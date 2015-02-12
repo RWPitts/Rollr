@@ -14,10 +14,15 @@
     <string name="buttonTextD20">D20</string>
     <string name="textViewQuickRoll">Pick a Die</string>
     <string name="textButtonMainMenu">Main Menu</string>
-    <string name="title_activity_quick_roll_result">quickRollResult</string>
+    <string name="title_activity_quick_roll_result">Roll Result</string>
     <string name="hello_world">Hello world!</string>
     <string name="quickRollResultValue">Test</string>
     <string name="buttonReroll">Roll Again</string>
     <string name="buttonBack">Back</string>
+    <string name="title_activity_game_list">Game List</string>
+    <string name="addgame">Add Game</string>
+    <string name="gamesBack">Back</string>
+    <string name="title_activity_add_game">Add Game</string>
+    <string name="buttonSettings">Settings</string>
 
 </resources>

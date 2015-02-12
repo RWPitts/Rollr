@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:text="@string/buttonGame"
         android:id="@+id/buttonGames"
+        android:onClick="onClickGames"
         android:background="@null"
         android:src="@drawable/mygames"
         android:layout_alignParentBottom="true"

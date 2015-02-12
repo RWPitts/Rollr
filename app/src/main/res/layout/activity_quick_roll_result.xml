@@ -16,7 +16,8 @@
         android:id="@+id/textRollResult"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp"
+        android:textSize="55sp"
+        android:layout_marginTop="56dp"
         android:textColor="#ffffffff" />
 
     <TextView
@@ -26,7 +27,9 @@
         android:id="@+id/textResult"
         android:layout_below="@+id/textRollResult"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp" />
+        android:textSize="55sp"
+        android:layout_marginTop="37dp"
+        android:textColor="#ffffffff" />
 
     <ImageButton
         android:layout_width="wrap_content"

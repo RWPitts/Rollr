@@ -1,14 +1,15 @@
 package com.example.zeroscifer.rollr;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.Button;
+import android.widget.TextView;
 
-import java.util.Random;
 
 
 public class quickMain extends ActionBarActivity {
@@ -17,6 +18,12 @@ public class quickMain extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quick_main);
+        Typeface titleFont = Typeface.createFromAsset(getAssets(), "GoodDog.otf");
+        TextView title = (TextView)findViewById(R.id.textViewQuickRoll);
+        title.setTypeface(titleFont);
+        Button back = (Button)findViewById(R.id.buttonBack);
+        back.setTypeface(titleFont);
+
     }
 
 
@@ -25,6 +32,8 @@ public class quickMain extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_quick_main, menu);
         return true;
+
+
     }
 
     @Override
@@ -43,6 +52,7 @@ public class quickMain extends ActionBarActivity {
     }
 
     public void onClickMain(View view) {
+
         Intent Quick = new Intent(getApplicationContext(), quickRollResult.class);
         int die = 0;
 
@@ -68,5 +78,9 @@ public class quickMain extends ActionBarActivity {
         finish();
     }
 
+    public void back(View view) {
+        startActivity(new Intent(getApplicationContext(), Rollr.class));
+        finish();
+    }
 
 }

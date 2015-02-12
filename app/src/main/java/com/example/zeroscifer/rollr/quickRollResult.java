@@ -1,13 +1,15 @@
 package com.example.zeroscifer.rollr;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import java.util.Random;
 
@@ -18,6 +20,13 @@ public class quickRollResult extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quick_roll_result);
+        Typeface titleFont = Typeface.createFromAsset(getAssets(), "GoodDog.otf");
+        TextView title = (TextView)findViewById(R.id.textRollResult);
+        title.setTypeface(titleFont);
+        TextView result = (TextView)findViewById(R.id.textResult);
+        result.setTypeface(titleFont);
+
+
         int value = 0;
 
         Bundle extras = getIntent().getExtras();

@@ -24,6 +24,18 @@
             android:name=".quickRollResult"
             android:label="@string/title_activity_quick_roll_result" >
         </activity>
+        <activity
+            android:name=".gameList"
+            android:label="@string/title_activity_game_list" >
+        </activity>
+        <activity
+            android:name=".addGame"
+            android:label="@string/title_activity_add_game"
+            android:parentActivityName=".gameList" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.zeroscifer.rollr.gameList" />
+        </activity>
     </application>
 
 </manifest>
