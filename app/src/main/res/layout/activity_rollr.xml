@@ -14,37 +14,42 @@
         android:id="@+id/buttonQuick"
         android:background="@null"
         android:onClick="onClickQuickRoll"
-        android:src="@drawable/quickroll"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:src="@drawable/quickroll1"
+        android:adjustViewBounds="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonGame"
         android:id="@+id/buttonGames"
-        android:layout_marginTop="74dp"
-        android:layout_below="@+id/buttonQuick"
-        android:layout_toLeftOf="@+id/buttonQuick"
-        android:layout_toStartOf="@+id/buttonQuick" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:layout_alignTop="@+id/buttonGames"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView" />
+        android:background="@null"
+        android:src="@drawable/mygames"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:src="@drawable/Rollr"
+        android:src="@drawable/rollr"
         android:background="@null"
-        android:layout_above="@+id/buttonQuick"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/buttonQuick"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/buttonGames"
+        android:layout_alignRight="@+id/buttonGames"
+        android:layout_alignEnd="@+id/buttonGames"
+        android:layout_marginBottom="41dp"></TableRow>
 
 </RelativeLayout>
