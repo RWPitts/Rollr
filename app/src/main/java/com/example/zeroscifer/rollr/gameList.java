@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+//import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,6 +21,14 @@ public class gameList extends ActionBarActivity{
     private String strGame;
 
     public void addGame(View view) {
+        /*
+        Code for listview text colour IN PROGRESS (need AsyncTask)
+
+        lv= (ListView) findViewById(R.id.listView1);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(gameList.this, R.layout.custom_textview, aa);
+        lv.setAdapter(adapter);
+        */
 
         builder = new AlertDialog.Builder(this);
         final EditText gameName = new EditText(this);
