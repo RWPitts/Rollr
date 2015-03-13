@@ -1,38 +1,53 @@
 package com.example.zeroscifer.rollr;
 
 import android.app.AlertDialog;
+//import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+//import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+//import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+//import android.view.ViewGroup;
 //import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+//import android.widget.ListView;
+//import android.widget.TextView;
 import android.widget.Toast;
+
+//import java.util.ArrayList;
+//import java.util.List;
 
 
 public class gameList extends ActionBarActivity{
 
     private AlertDialog.Builder builder;
     private String strGame;
+    //private ListView lv;
+    //private ArrayList<String> al = new ArrayList<String>();
 
     public void addGame(View view) {
-        /*
-        Code for listview text colour IN PROGRESS (need AsyncTask)
-
-        lv= (ListView) findViewById(R.id.listView1);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(gameList.this, R.layout.custom_textview, aa);
-        lv.setAdapter(adapter);
-        */
 
         builder = new AlertDialog.Builder(this);
         final EditText gameName = new EditText(this);
         strGame = null;
+
+        /*
+        Code for listview text colour IN PROGRESS (need AsyncTask)
+
+        lv= (ListView) findViewById(R.id.gameList);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(gameList.this, R.layout.custom_textview, al);
+        lv.setAdapter(adapter);
+
+        CustomListAdapter listAdapter = new CustomListAdapter(gameList.this , R.layout.gameList , mList);
+        mListView.setAdapter(listAdapter);
+        */
 
         builder.setTitle("Add Game");
         builder.setMessage("Enter Game Name");
@@ -52,6 +67,7 @@ public class gameList extends ActionBarActivity{
 
             }
         });
+
         AlertDialog dialogGameName = builder.create();
         dialogGameName.show();
     }
@@ -99,3 +115,38 @@ public class gameList extends ActionBarActivity{
         finish();
     }
 }
+/*
+class CustomListAdapter extends ArrayAdapter {
+
+    private Context mContext;
+    private int id;
+    private List<String> items;
+
+    public CustomListAdapter(Context context, int textViewResourceId, List<String> list) {
+        super(context, textViewResourceId, list);
+        mContext = context;
+        id = textViewResourceId;
+        items = list;
+    }
+
+    @Override
+    public View getView(int position, View v, ViewGroup parent) {
+        View mView = v;
+        if (mView == null) {
+            LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            mView = vi.inflate(id, null);
+        }
+
+        TextView text = (TextView) mView.findViewById(R.id.tv);
+
+        if (items.get(position) != null) {
+            text.setTextColor(Color.WHITE);
+            text.setText(items.get(position));
+
+        }
+
+        return mView;
+    }
+}
+]
+*/
