@@ -14,23 +14,11 @@
         android:id="@+id/buttonQuick"
         android:background="@null"
         android:onClick="onClickQuickRoll"
-        android:src="@drawable/quickroll1"
+        android:src="@drawable/quickroll"
         android:adjustViewBounds="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonGame"
-        android:id="@+id/buttonGames"
-        android:onClick="onClickGames"
-        android:background="@null"
-        android:src="@drawable/mygames"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/buttonGames"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -42,12 +30,17 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignBottom="@+id/buttonGames"
-        android:layout_alignRight="@+id/buttonGames"
-        android:layout_alignEnd="@+id/buttonGames"
-        android:layout_marginBottom="41dp"></TableRow>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonGame"
+        android:id="@+id/buttonGames"
+        android:onClick="onClickGames"
+        android:background="@null"
+        android:src="@drawable/mygames"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/buttonQuick"
+        android:layout_alignStart="@+id/buttonQuick" />
 
 </RelativeLayout>
