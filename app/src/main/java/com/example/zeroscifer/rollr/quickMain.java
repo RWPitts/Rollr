@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+//import android.widget.ImageButton;
 import android.widget.TextView;
 
 
@@ -21,8 +21,8 @@ public class quickMain extends ActionBarActivity {
         Typeface titleFont = Typeface.createFromAsset(getAssets(), "GoodDog.otf");
         TextView title = (TextView)findViewById(R.id.textViewQuickRoll);
         title.setTypeface(titleFont);
-        Button back = (Button)findViewById(R.id.buttonBack);
-        back.setTypeface(titleFont);
+        //ImageButton back = (ImageButton)findViewById(R.id.buttonBack);
+        //back.setTypeface(titleFont);
 
     }
 
