@@ -1,14 +1,11 @@
 package com.example.zeroscifer.rollr;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 
 public class Rollr extends ActionBarActivity {
@@ -17,11 +14,6 @@ public class Rollr extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rollr);
-        Typeface titleFont = Typeface.createFromAsset(getAssets(), "GoodDog.otf");
-        //Button quickRoll = (Button)findViewById(R.id.buttonGames);
-        //Button settings = (Button)findViewById(R.id.buttonSet);
-        //quickRoll.setTypeface(titleFont);
-        //settings.setTypeface(titleFont);
     }
 
 

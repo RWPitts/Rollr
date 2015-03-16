@@ -41,12 +41,12 @@
         android:id="@+id/gameList"
         android:background="#662233"
         android:choiceMode="singleChoice"
-        android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/buttonAdd"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="false"
         android:layout_above="@+id/buttonAdd"
-        android:fastScrollAlwaysVisible="true" />
+        android:fastScrollAlwaysVisible="true"
+        android:layout_below="@+id/textView" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -121,5 +121,15 @@
         android:layout_below="@+id/imageButton6"
         android:layout_alignLeft="@+id/imageButton6"
         android:layout_alignStart="@+id/imageButton6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/gameList"
+        android:layout_alignEnd="@+id/gameList" />
 
 </RelativeLayout>
