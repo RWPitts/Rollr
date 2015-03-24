@@ -21,8 +21,11 @@
     <string name="buttonBack">Back</string>
     <string name="title_activity_game_list">Game List</string>
     <string name="addgame">Add Game</string>
+    <string name="addRoll">Add Roll</string>
     <string name="gamesBack">Back</string>
     <string name="title_activity_add_game">Add Game</string>
     <string name="buttonSettings">Settings</string>
+    <string name="title_activity_roll_list">RollList</string>
+    <string name="title_activity_new_roll">NewRoll</string>
 
 </resources>

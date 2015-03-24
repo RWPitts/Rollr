@@ -36,6 +36,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.zeroscifer.rollr.gameList" />
         </activity>
+        <activity
+            android:name=".RollList"
+            android:label="@string/title_activity_roll_list" >
+        </activity>
+        <activity
+            android:name=".NewRoll"
+            android:label="@string/title_activity_new_roll" >
+        </activity>
     </application>
 
 </manifest>

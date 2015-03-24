@@ -15,11 +15,11 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-public class gameList extends ActionBarActivity{
+public class RollList extends ActionBarActivity{
 
     private AlertDialog.Builder builder;
     private String strGame;
-    DBHelper helper = null;
+    DBHelperRolls helper = null;
     SQLiteDatabase db = null;
     ContentValues values = null;
 
@@ -37,7 +37,7 @@ public class gameList extends ActionBarActivity{
             public void onClick(DialogInterface dialog, int which) {
                 strGame = gameName.getText().toString();
                 values.put("name", strGame);
-                db.insert("gametable", "", values);
+                db.insert("rolltable", "", values);
                 values.clear();
             }
         });
@@ -52,13 +52,13 @@ public class gameList extends ActionBarActivity{
         dialogGameName.show();
     }
 
-        @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_list);
 
         Typeface titleFont = Typeface.createFromAsset(getAssets(), "GoodDog.otf");
-        helper = new DBHelper(this, "game_db", null, 1);
+        helper = new DBHelperRolls(this, "game_db", null, 1);
         db = helper.getWritableDatabase();
         values = new ContentValues();
 
@@ -68,7 +68,7 @@ public class gameList extends ActionBarActivity{
         Button add = (Button)findViewById(R.id.buttonAdd);
         add.setTypeface(titleFont);
 
-        Cursor c = db.rawQuery("SELECT * FROM gametable;", null);
+        Cursor c = db.rawQuery("SELECT * FROM rolltable;", null);
         String[] from = new String[]{"name"};
 
         int[] to = { android.R.id.text1};
@@ -78,7 +78,7 @@ public class gameList extends ActionBarActivity{
     }
 
     public void back(View view) {
-        startActivity(new Intent(getApplicationContext(), Rollr.class));
+        startActivity(new Intent(getApplicationContext(), gameList.class));
         finish();
     }
 }
