@@ -10,6 +10,7 @@ import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -58,7 +59,7 @@ public class gameList extends ActionBarActivity{
         setContentView(R.layout.activity_game_list);
 
         Typeface titleFont = Typeface.createFromAsset(getAssets(), "GoodDog.otf");
-        helper = new DBHelper(this, "game_db", null, 1);
+        helper = new DBHelper(this, "game_db2", null, 1);
         db = helper.getWritableDatabase();
         values = new ContentValues();
 
@@ -75,6 +76,17 @@ public class gameList extends ActionBarActivity{
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, c, from, to, 0);
         ListView listView = (ListView) findViewById(R.id.gameList);
         listView.setAdapter(adapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position,
+                                        long id) {
+                    Intent Quick = new Intent(getApplicationContext(), RollList.class);
+                    String message = "STO";
+                    Quick.putExtra("game", message);
+                    startActivity(Quick);
+                    finish();
+                }
+            });
     }
 
     public void back(View view) {
