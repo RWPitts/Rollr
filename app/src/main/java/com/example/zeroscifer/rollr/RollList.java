@@ -11,9 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 public class RollList extends ActionBarActivity{
-    String game = "STO";
+    String game = "";
 
     DBHelper helper = null;
     SQLiteDatabase db = null;
@@ -21,7 +22,10 @@ public class RollList extends ActionBarActivity{
 
     public void addGame(View view) {
 
-
+        Intent addRoll = new Intent(getApplicationContext(), NewRoll.class);
+        addRoll.putExtra("game", game);
+        startActivity(addRoll);
+        finish();
     }
 
     @Override
@@ -33,6 +37,13 @@ public class RollList extends ActionBarActivity{
         helper = new DBHelper(this, "game_db2", null, 1);
         db = helper.getWritableDatabase();
         values = new ContentValues();
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            game = extras.getString("game");
+        }
+        //Toast.makeText(getApplicationContext(), game, Toast.LENGTH_LONG).show();
+
 
         Button back = (Button)findViewById(R.id.buttonBack);
         back.setTypeface(titleFont);

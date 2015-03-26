@@ -13,9 +13,9 @@
     <string name="buttonTextD12">D12</string>
     <string name="buttonTextD20">D20</string>
     <string name="textViewQuickRoll">Pick a Die</string>
+    <string name="textAddRoll">Add Dice</string>
     <string name="textButtonMainMenu">Main Menu</string>
     <string name="title_activity_quick_roll_result">Roll Result</string>
-    <string name="hello_world">Hello world!</string>
     <string name="quickRollResultValue">Test</string>
     <string name="buttonReroll">Roll Again</string>
     <string name="buttonBack">Back</string>
@@ -27,5 +27,11 @@
     <string name="buttonSettings">Settings</string>
     <string name="title_activity_roll_list">RollList</string>
     <string name="title_activity_new_roll">NewRoll</string>
+    <string name="textd2">0</string>
+    <string name="textd4">0</string>
+    <string name="textd6">0</string>
+    <string name="textd9">0</string>
+    <string name="textd12">0</string>
+    <string name="textd20">0</string>
 
 </resources>

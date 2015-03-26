@@ -27,30 +27,6 @@ public class quickMain extends ActionBarActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_quick_main, menu);
-        return true;
-
-
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     public void onClickMain(View view) {
 
         Intent Quick = new Intent(getApplicationContext(), quickRollResult.class);
@@ -68,6 +44,9 @@ public class quickMain extends ActionBarActivity {
                 break;
             case R.id.buttonD12:
                 die = 12;
+                break;
+            case R.id.buttonD10:
+                die = 10;
                 break;
             case R.id.buttonD20:
                 die = 20;

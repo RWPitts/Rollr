@@ -103,6 +103,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/buttonD10"
         android:src="@drawable/d10b"
+        android:onClick="onClickMain"
         android:background="@null"
         android:layout_alignTop="@+id/buttonD12"
         android:layout_alignRight="@+id/buttonD2"

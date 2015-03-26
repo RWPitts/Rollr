@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class gameList extends ActionBarActivity{
 
@@ -23,12 +25,14 @@ public class gameList extends ActionBarActivity{
     DBHelper helper = null;
     SQLiteDatabase db = null;
     ContentValues values = null;
+    String[] from;
 
     public void addGame(View view) {
 
         builder = new AlertDialog.Builder(this);
         final EditText gameName = new EditText(this);
         strGame = null;
+
 
         builder.setTitle("Add Game");
         builder.setMessage("Enter Game Name");
@@ -70,7 +74,7 @@ public class gameList extends ActionBarActivity{
         add.setTypeface(titleFont);
 
         Cursor c = db.rawQuery("SELECT * FROM gametable;", null);
-        String[] from = new String[]{"name"};
+        from = new String[]{"name"};
 
         int[] to = { android.R.id.text1};
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, c, from, to, 0);
@@ -81,7 +85,9 @@ public class gameList extends ActionBarActivity{
                 public void onItemClick(AdapterView<?> parent, View view, int position,
                                         long id) {
                     Intent Quick = new Intent(getApplicationContext(), RollList.class);
-                    String message = "STO";
+                    String message = (String)((TextView) view).getText();
+
+                    //Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
                     Quick.putExtra("game", message);
                     startActivity(Quick);
                     finish();
@@ -92,5 +98,13 @@ public class gameList extends ActionBarActivity{
     public void back(View view) {
         startActivity(new Intent(getApplicationContext(), Rollr.class));
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (helper != null) {
+            helper.close();
+        }
     }
 }
