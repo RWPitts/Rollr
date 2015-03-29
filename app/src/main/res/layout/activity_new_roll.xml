@@ -92,8 +92,7 @@
         android:width="100sp"
         android:textSize="15sp"
         android:src="@drawable/mainmenu"
-        android:background="@null"
-        />
+        android:background="@null" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -115,16 +114,6 @@
         android:layout_below="@+id/buttonD2Minus"
         android:layout_marginLeft="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/textd20"
-        android:id="@+id/textD20"
-        android:layout_alignRight="@+id/buttonD20"
-        android:layout_marginRight="15dp"
-        android:layout_alignBottom="@+id/buttonD12" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -134,7 +123,7 @@
         android:width="150dp"
         android:textColor="#ffffffff" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -143,7 +132,9 @@
         android:layout_below="@+id/buttonD2"
         android:layout_alignRight="@+id/buttonD2"
         android:layout_alignEnd="@+id/buttonD2"
-        android:onClick="D2Plus" />
+        android:onClick="D2Plus"
+        android:src="@drawable/plus"
+        android:background="@null"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -156,7 +147,7 @@
         android:layout_marginLeft="28dp"
         android:textColor="#ffffffff" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -165,9 +156,11 @@
         android:layout_below="@+id/textViewD2"
         android:layout_alignRight="@+id/buttonD2"
         android:layout_alignEnd="@+id/buttonD2"
-        android:onClick="D2Minus" />
+        android:onClick="D2Minus"
+        android:src="@drawable/minus"
+        android:background="@null" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -177,7 +170,9 @@
         android:layout_alignRight="@+id/buttonD10"
         android:layout_alignEnd="@+id/buttonD10"
         android:onClick="D10Plus"
-        android:layout_marginLeft="15dp"/>
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/plus"
+        android:background="@null" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -190,7 +185,7 @@
         android:layout_marginLeft="28dp"
         android:textColor="#ffffffff" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -200,9 +195,11 @@
         android:layout_alignRight="@+id/buttonD10"
         android:layout_alignEnd="@+id/buttonD10"
         android:onClick="D10Minus"
-        android:layout_marginLeft="15dp" />
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/minus"
+        android:background="@null" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -212,7 +209,9 @@
         android:layout_alignRight="@+id/buttonD4"
         android:layout_alignEnd="@+id/buttonD4"
         android:onClick="D4Plus"
-        android:layout_marginLeft="15dp"/>
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/plus"
+        android:background="@null" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -226,7 +225,7 @@
         android:layout_marginLeft="28dp"
         android:textColor="#ffffffff" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -236,9 +235,11 @@
         android:layout_alignRight="@+id/buttonD4"
         android:layout_alignEnd="@+id/buttonD4"
         android:onClick="D4Minus"
-        android:layout_marginLeft="15dp" />
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/minus"
+        android:background="@null" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -248,7 +249,9 @@
         android:layout_alignRight="@+id/buttonD6"
         android:layout_alignEnd="@+id/buttonD6"
         android:onClick="D6Plus"
-        android:layout_marginLeft="15dp"/>
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/plus"
+        android:background="@null"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -262,7 +265,7 @@
         android:textSize="35dp"
         android:textColor="#ffffffff" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -272,9 +275,11 @@
         android:layout_alignRight="@+id/buttonD6"
         android:layout_alignEnd="@+id/buttonD6"
         android:onClick="D6Minus"
-        android:layout_marginLeft="15dp" />
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/minus"
+        android:background="@null" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -284,7 +289,9 @@
         android:layout_alignRight="@+id/buttonD12"
         android:layout_alignEnd="@+id/buttonD12"
         android:onClick="D12Plus"
-        android:layout_marginLeft="15dp"/>
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/plus"
+        android:background="@null" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -298,7 +305,7 @@
         android:layout_marginLeft="28dp"
         android:textColor="#ffffffff" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -308,9 +315,11 @@
         android:layout_alignRight="@+id/buttonD12"
         android:layout_alignEnd="@+id/buttonD12"
         android:onClick="D12Minus"
-        android:layout_marginLeft="15dp" />
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/minus"
+        android:background="@null" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -320,7 +329,9 @@
         android:layout_alignRight="@+id/buttonD20"
         android:layout_alignEnd="@+id/buttonD20"
         android:onClick="D20Plus"
-        android:layout_marginLeft="15dp"/>
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/plus"
+        android:background="@null" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -334,7 +345,7 @@
         android:textSize="35dp"
         android:textColor="#ffffffff" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -344,5 +355,7 @@
         android:layout_alignRight="@+id/buttonD20"
         android:layout_alignEnd="@+id/buttonD20"
         android:onClick="D20Minus"
-        android:layout_marginLeft="15dp" />
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/minus"
+        android:background="@null" />
 </RelativeLayout>
