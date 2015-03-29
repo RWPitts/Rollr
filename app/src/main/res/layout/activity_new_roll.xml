@@ -4,7 +4,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.zeroscifer.rollr.NewRoll">
+    tools:context="com.example.zeroscifer.rollr.NewRoll"
+    android:background="#662233"
+    android:clickable="true">
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -50,9 +52,8 @@
         android:src="@drawable/d12"
         android:background="@null"
         android:onClick="onClickMain"
-        android:layout_above="@+id/numberPicker2"
-        android:layout_centerHorizontal="true"
-        />
+        android:layout_alignBottom="@+id/buttonD10"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -97,9 +98,8 @@
         android:id="@+id/buttonD10"
         android:src="@drawable/d10b"
         android:background="@null"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/buttonD2"
-        android:layout_alignStart="@+id/buttonD2" />
+        android:layout_below="@+id/buttonD2Minus"
+        android:layout_marginLeft="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -117,50 +117,218 @@
         android:id="@+id/rollName"
         android:layout_alignTop="@+id/textViewQuickRoll"
         android:layout_alignRight="@+id/buttonD6"
-        android:width="150dp" />
+        android:width="150dp"
+        android:textColor="#ffffffff" />
 
-    <NumberPicker
+    <Button
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numberPicker"
+        android:text="@string/ButtonPlus"
+        android:id="@+id/buttonD2Plus"
         android:layout_below="@+id/buttonD2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignRight="@+id/buttonD2"
+        android:layout_alignEnd="@+id/buttonD2"
+        android:onClick="D2Plus" />
 
-    <NumberPicker
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numberPicker2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/textViewD2"
+        android:layout_below="@+id/buttonD2Plus"
+        android:textSize="35dp"
+        android:layout_marginLeft="28dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonMinus"
+        android:id="@+id/buttonD2Minus"
+        android:layout_below="@+id/textViewD2"
+        android:layout_alignRight="@+id/buttonD2"
+        android:layout_alignEnd="@+id/buttonD2"
+        android:onClick="D2Minus" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonPlus"
+        android:id="@+id/buttonD10Plus"
         android:layout_below="@+id/buttonD10"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignRight="@+id/buttonD10"
+        android:layout_alignEnd="@+id/buttonD10"
+        android:onClick="D10Plus"
+        android:layout_marginLeft="15dp"/>
 
-    <NumberPicker
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numberPicker3"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/textViewD10"
+        android:layout_below="@+id/buttonD10Plus"
+        android:textSize="35dp"
+        android:layout_marginLeft="28dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonMinus"
+        android:id="@+id/buttonD10Minus"
+        android:layout_below="@+id/textViewD10"
+        android:layout_alignRight="@+id/buttonD10"
+        android:layout_alignEnd="@+id/buttonD10"
+        android:onClick="D10Minus"
+        android:layout_marginLeft="15dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonPlus"
+        android:id="@+id/buttonD4Plus"
         android:layout_below="@+id/buttonD4"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignRight="@+id/buttonD4"
+        android:layout_alignEnd="@+id/buttonD4"
+        android:onClick="D4Plus"
+        android:layout_marginLeft="15dp"/>
 
-    <NumberPicker
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numberPicker4"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/textViewD4"
+        android:layout_below="@+id/buttonD4Plus"
+        android:layout_centerHorizontal="true"
+        android:textSize="35dp"
+        android:layout_marginLeft="28dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonMinus"
+        android:id="@+id/buttonD4Minus"
+        android:layout_below="@+id/textViewD4"
+        android:layout_alignRight="@+id/buttonD4"
+        android:layout_alignEnd="@+id/buttonD4"
+        android:onClick="D4Minus"
+        android:layout_marginLeft="15dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonPlus"
+        android:id="@+id/buttonD6Plus"
         android:layout_below="@+id/buttonD6"
-        android:layout_alignParentRight="true" />
+        android:layout_alignRight="@+id/buttonD6"
+        android:layout_alignEnd="@+id/buttonD6"
+        android:onClick="D6Plus"
+        android:layout_marginLeft="15dp"/>
 
-    <NumberPicker
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numberPicker5"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/textViewD6"
+        android:layout_below="@+id/buttonD6Plus"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="28dp"
+        android:textSize="35dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonMinus"
+        android:id="@+id/buttonD6Minus"
+        android:layout_below="@+id/textViewD6"
+        android:layout_alignRight="@+id/buttonD6"
+        android:layout_alignEnd="@+id/buttonD6"
+        android:onClick="D6Minus"
+        android:layout_marginLeft="15dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonPlus"
+        android:id="@+id/buttonD12Plus"
         android:layout_below="@+id/buttonD12"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignRight="@+id/buttonD12"
+        android:layout_alignEnd="@+id/buttonD12"
+        android:onClick="D12Plus"
+        android:layout_marginLeft="15dp"/>
 
-    <NumberPicker
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numberPicker6"
-        android:layout_below="@+id/buttonD20"
-        android:layout_alignParentRight="true" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/textViewD12"
+        android:layout_below="@+id/buttonD12Plus"
+        android:layout_centerHorizontal="true"
+        android:textSize="35dp"
+        android:layout_marginLeft="28dp"
+        android:textColor="#ffffffff" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonMinus"
+        android:id="@+id/buttonD12Minus"
+        android:layout_below="@+id/textViewD12"
+        android:layout_alignRight="@+id/buttonD12"
+        android:layout_alignEnd="@+id/buttonD12"
+        android:onClick="D12Minus"
+        android:layout_marginLeft="15dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonPlus"
+        android:id="@+id/buttonD20Plus"
+        android:layout_below="@+id/buttonD20"
+        android:layout_alignRight="@+id/buttonD20"
+        android:layout_alignEnd="@+id/buttonD20"
+        android:onClick="D20Plus"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/textViewD20"
+        android:layout_below="@+id/buttonD20Plus"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="28dp"
+        android:textSize="35dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonMinus"
+        android:id="@+id/buttonD20Minus"
+        android:layout_below="@+id/textViewD20"
+        android:layout_alignRight="@+id/buttonD20"
+        android:layout_alignEnd="@+id/buttonD20"
+        android:onClick="D20Minus"
+        android:layout_marginLeft="15dp" />
 </RelativeLayout>

@@ -33,5 +33,7 @@
     <string name="textd9">0</string>
     <string name="textd12">0</string>
     <string name="textd20">0</string>
+    <string name="ButtonPlus">+</string>
+    <string name="ButtonMinus">-</string>
 
 </resources>

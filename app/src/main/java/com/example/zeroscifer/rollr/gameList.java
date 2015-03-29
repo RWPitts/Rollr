@@ -16,7 +16,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class gameList extends ActionBarActivity{
 
@@ -43,6 +42,7 @@ public class gameList extends ActionBarActivity{
                 strGame = gameName.getText().toString();
                 values.put("name", strGame);
                 db.insert("gametable", "", values);
+                listViewUpdate();
                 values.clear();
             }
         });
@@ -55,6 +55,7 @@ public class gameList extends ActionBarActivity{
 
         AlertDialog dialogGameName = builder.create();
         dialogGameName.show();
+
     }
 
         @Override
@@ -73,26 +74,8 @@ public class gameList extends ActionBarActivity{
         Button add = (Button)findViewById(R.id.buttonAdd);
         add.setTypeface(titleFont);
 
-        Cursor c = db.rawQuery("SELECT * FROM gametable;", null);
-        from = new String[]{"name"};
+        listViewUpdate();
 
-        int[] to = { android.R.id.text1};
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, c, from, to, 0);
-        ListView listView = (ListView) findViewById(R.id.gameList);
-        listView.setAdapter(adapter);
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position,
-                                        long id) {
-                    Intent Quick = new Intent(getApplicationContext(), RollList.class);
-                    String message = (String)((TextView) view).getText();
-
-                    //Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
-                    Quick.putExtra("game", message);
-                    startActivity(Quick);
-                    finish();
-                }
-            });
     }
 
     public void back(View view) {
@@ -106,5 +89,29 @@ public class gameList extends ActionBarActivity{
         if (helper != null) {
             helper.close();
         }
+    }
+
+    public void listViewUpdate() {
+
+        Cursor c = db.rawQuery("SELECT * FROM gametable;", null);
+        from = new String[]{"name"};
+
+        int[] to = { android.R.id.text1};
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, c, from, to, 0);
+        ListView listView = (ListView) findViewById(R.id.gameList);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Intent Quick = new Intent(getApplicationContext(), RollList.class);
+                String message = (String)((TextView) view).getText();
+
+                //Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                Quick.putExtra("game", message);
+                startActivity(Quick);
+                finish();
+            }
+        });
     }
 }
