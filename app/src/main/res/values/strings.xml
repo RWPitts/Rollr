@@ -15,6 +15,7 @@
     <string name="textViewQuickRoll">Pick a Die</string>
     <string name="textAddRoll">Roll Name:</string>
     <string name="textButtonMainMenu">Main Menu</string>
+    <string name="textButtonMainAdd">Add</string>
     <string name="title_activity_quick_roll_result">Roll Result</string>
     <string name="quickRollResultValue">Test</string>
     <string name="buttonReroll">Roll Again</string>

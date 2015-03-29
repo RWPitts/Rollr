@@ -1,9 +1,12 @@
 package com.example.zeroscifer.rollr;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -14,17 +17,46 @@ public class NewRoll extends ActionBarActivity {
     int D10 = 0;
     int D12 = 0;
     int D20 = 0;
+    private String strRoll;
+    private String game;
+    DBHelper helper = null;
+    SQLiteDatabase db = null;
+    ContentValues values = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_roll);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            game = extras.getString("game");
+        }
+
+        helper = new DBHelper(this, "game_db2", null, 1);
+        db = helper.getWritableDatabase();
+        values = new ContentValues();
     }
 
-    public void onClickMain(View view) {
+    public void addRoll(View view) {
+        EditText rollname = (EditText)findViewById(R.id.rollName);
+        strRoll = rollname.getText().toString();
+        values.put("rollname", strRoll);
+        values.put("name", game);
+        values.put("d2", D2);
+        values.put("d4", D4);
+        values.put("d6", D6);
+        values.put("d9", D10);
+        values.put("d12", D12);
+        values.put("d20", D20);
+        db.insert("rolltable", "", values);
+        values.clear();
 
+        Intent addRoll = new Intent(getApplicationContext(), RollList.class);
+        addRoll.putExtra("game", game);
+        startActivity(addRoll);
+        finish();
     }
-
 
     public void back(View view) {
         startActivity(new Intent(getApplicationContext(), RollList.class));

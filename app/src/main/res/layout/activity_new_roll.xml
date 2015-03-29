@@ -15,7 +15,7 @@
         android:id="@+id/buttonD2"
         android:src="@drawable/d2"
         android:background="@null"
-        android:onClick="onClickMain"
+        android:onClick=""
         android:layout_alignBottom="@+id/buttonD4"
         android:layout_marginLeft="15dp"
         />
@@ -27,7 +27,7 @@
         android:id="@+id/buttonD4"
         android:src="@drawable/d4"
         android:background="@null"
-        android:onClick="onClickMain"
+        android:onClick=""
         android:layout_below="@+id/textViewQuickRoll"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp" />
@@ -39,7 +39,7 @@
         android:id="@+id/buttonD6"
         android:src="@drawable/d6"
         android:background="@null"
-        android:onClick="onClickMain"
+        android:onClick=""
         android:layout_alignBottom="@+id/buttonD4"
         android:layout_alignParentRight="true"
         android:layout_marginRight="15dp" />
@@ -51,7 +51,7 @@
         android:id="@+id/buttonD12"
         android:src="@drawable/d12"
         android:background="@null"
-        android:onClick="onClickMain"
+        android:onClick=""
         android:layout_alignBottom="@+id/buttonD10"
         android:layout_centerHorizontal="true" />
 
@@ -75,7 +75,6 @@
         android:singleLine="true"
         android:text="@string/textButtonMainMenu"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:width="100sp"
         android:textSize="15sp"
         android:src="@drawable/mainmenu"
@@ -84,10 +83,25 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/buttonOk"
+        android:onClick="addRoll"
+        android:singleLine="true"
+        android:text="@string/textButtonMainAdd"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:width="100sp"
+        android:textSize="15sp"
+        android:src="@drawable/mainmenu"
+        android:background="@null"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/buttonD20"
         android:src="@drawable/d20"
         android:background="@null"
-        android:onClick="onClickMain"
+        android:onClick=""
         android:layout_alignBottom="@+id/buttonD12"
         android:layout_alignParentRight="true"
         android:layout_marginRight="15dp" />
