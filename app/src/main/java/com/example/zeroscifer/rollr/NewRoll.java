@@ -141,4 +141,12 @@ public class NewRoll extends ActionBarActivity {
         TextView textView = (TextView) this.findViewById(R.id.textViewD20);
         textView.setText(String.valueOf(D20));
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (helper != null) {
+            helper.close();
+        }
+    }
 }

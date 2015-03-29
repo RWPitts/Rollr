@@ -44,6 +44,14 @@
             android:name=".NewRoll"
             android:label="@string/title_activity_new_roll" >
         </activity>
+        <activity
+            android:name=".CustomRollResult"
+            android:label="@string/title_activity_custom_roll_result"
+            android:parentActivityName=".gameList" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.zeroscifer.rollr.gameList" />
+        </activity>
     </application>
 
 </manifest>

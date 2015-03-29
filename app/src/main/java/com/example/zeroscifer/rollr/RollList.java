@@ -8,13 +8,16 @@ import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
-import android.widget.Toast;
+import android.widget.TextView;
+
 
 public class RollList extends ActionBarActivity{
     String game = "";
+    String message = "";
 
     DBHelper helper = null;
     SQLiteDatabase db = null;
@@ -58,6 +61,22 @@ public class RollList extends ActionBarActivity{
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, c, from, to, 0);
         ListView listView = (ListView) findViewById(R.id.gameList);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Intent Quick = new Intent(getApplicationContext(), CustomRollResult.class);
+                message = (String)((TextView) view).getText();
+
+                //Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                Quick.putExtra("game", game);
+                Quick.putExtra("roll", message);
+                startActivity(Quick);
+                finish();
+            }
+        });
+
     }
 
     public void back(View view) {

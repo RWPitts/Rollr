@@ -36,5 +36,7 @@
     <string name="textd20">0</string>
     <string name="ButtonPlus">+</string>
     <string name="ButtonMinus">-</string>
+    <string name="title_activity_custom_roll_result">Roll Result</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
