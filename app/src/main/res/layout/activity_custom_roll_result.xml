@@ -34,7 +34,6 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/buttonReroll"
         android:id="@+id/buttonReroll"
         android:background="@null"
         android:onClick="reroll"
@@ -46,7 +45,6 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/buttonBack"
         android:id="@+id/buttonBack"
         android:background="@null"
         android:onClick="back"

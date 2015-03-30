@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 //import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -66,12 +67,14 @@ public class RollList extends ActionBarActivity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.roll);
                 Intent Quick = new Intent(getApplicationContext(), CustomRollResult.class);
                 message = (String)((TextView) view).getText();
 
                 //Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
                 Quick.putExtra("game", game);
                 Quick.putExtra("roll", message);
+                mp.start();
                 startActivity(Quick);
                 finish();
             }

@@ -111,6 +111,7 @@ public class gameList extends ActionBarActivity{
                 //Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
                 Quick.putExtra("game", message);
                 startActivity(Quick);
+
                 finish();
             }
         });

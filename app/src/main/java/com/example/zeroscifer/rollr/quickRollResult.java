@@ -2,6 +2,7 @@ package com.example.zeroscifer.rollr;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ import java.util.Random;
 
 public class quickRollResult extends ActionBarActivity {
     int die;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +45,11 @@ public class quickRollResult extends ActionBarActivity {
     }
 
     public void reroll(View view) {
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.roll);
+        mp.start();
         TextView textView = (TextView) this.findViewById(R.id.textResult);
         textView.setText(String.valueOf(random(die)));
+
     }
 
     public void back(View view) {

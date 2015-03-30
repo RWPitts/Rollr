@@ -2,10 +2,9 @@ package com.example.zeroscifer.rollr;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 //import android.widget.ImageButton;
 import android.widget.TextView;
@@ -28,7 +27,7 @@ public class quickMain extends ActionBarActivity {
 
 
     public void onClickMain(View view) {
-
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.roll);
         Intent Quick = new Intent(getApplicationContext(), quickRollResult.class);
         int die = 0;
 
@@ -53,8 +52,10 @@ public class quickMain extends ActionBarActivity {
                 break;
         }
         Quick.putExtra("die", die);
+        mp.start();
         startActivity(Quick);
         finish();
+
     }
 
     public void back(View view) {

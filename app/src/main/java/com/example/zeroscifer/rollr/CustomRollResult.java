@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import java.util.Random;
+
 
 
 public class CustomRollResult extends ActionBarActivity {
@@ -106,6 +108,8 @@ public class CustomRollResult extends ActionBarActivity {
         }
         textView = (TextView) this.findViewById(R.id.textResult);
         textView.setText(String.valueOf(value));
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.roll);
+        mp.start();
     }
 
     public int random(int max) {
