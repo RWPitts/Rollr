@@ -16,12 +16,10 @@
         android:background="@null"
         android:onClick="onClickMain"
         android:nestedScrollingEnabled="true"
-        android:layout_marginBottom="51dp"
-        android:layout_above="@+id/buttonD20"
-        android:layout_toLeftOf="@+id/buttonBack"
-        android:layout_toStartOf="@+id/buttonBack"
-        android:layout_marginRight="37dp"
-        android:layout_marginEnd="37dp" />
+        android:layout_below="@+id/textViewQuickRoll"
+        android:layout_toLeftOf="@+id/textViewQuickRoll"
+        android:layout_toStartOf="@+id/textViewQuickRoll"
+        android:layout_marginTop="123dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -54,7 +52,7 @@
         android:id="@+id/buttonD12"
         android:src="@drawable/d12"
         android:background="@null"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="87dp"
         android:onClick="onClickMain"
         android:layout_above="@+id/buttonBack"
         android:layout_centerHorizontal="true" />
@@ -82,7 +80,7 @@
         android:layout_centerHorizontal="true"
         android:width="100sp"
         android:textSize="15sp"
-        android:src="@drawable/mainmenu"
+        android:src="@drawable/back"
         android:background="@null"/>
 
     <ImageButton
@@ -105,7 +103,7 @@
         android:src="@drawable/d10b"
         android:onClick="onClickMain"
         android:background="@null"
-        android:layout_alignTop="@+id/buttonD12"
+        android:layout_alignBottom="@+id/buttonD12"
         android:layout_alignRight="@+id/buttonD2"
         android:layout_alignEnd="@+id/buttonD2" />
 

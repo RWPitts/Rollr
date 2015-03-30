@@ -50,10 +50,11 @@
         android:id="@+id/buttonBack"
         android:background="@null"
         android:onClick="back"
-        android:src="@drawable/mainmenu"
-        android:layout_alignParentBottom="true"
+        android:src="@drawable/back"
+        android:layout_alignBottom="@+id/buttonReroll"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/buttonReroll" />
 
 
 </RelativeLayout>
