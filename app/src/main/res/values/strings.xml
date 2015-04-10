@@ -10,6 +10,7 @@
     <string name="buttonTextD2">d2</string>
     <string name="buttonTextD4">D4</string>
     <string name="buttonTextD6">D6</string>
+    <string name="buttonTextD10">D10</string>
     <string name="buttonTextD12">D12</string>
     <string name="buttonTextD20">D20</string>
     <string name="textViewQuickRoll">Pick a Die</string>
@@ -31,7 +32,7 @@
     <string name="textd2">0</string>
     <string name="textd4">0</string>
     <string name="textd6">0</string>
-    <string name="textd9">0</string>
+    <string name="textd10">0</string>
     <string name="textd12">0</string>
     <string name="textd20">0</string>
     <string name="ButtonPlus">+</string>

@@ -19,7 +19,7 @@
         android:layout_alignParentEnd="true"
         android:width="100sp"
         android:background="@null"
-        android:src="@drawable/newgame" />
+        android:src="@drawable/new2" />
 
     <ImageButton
         android:layout_width="wrap_content"

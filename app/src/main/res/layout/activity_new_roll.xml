@@ -8,50 +8,46 @@
     android:background="#662233"
     android:clickable="true">
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonTextD2"
         android:id="@+id/buttonD2"
         android:src="@drawable/d2"
         android:background="@null"
-        android:onClick=""
         android:layout_alignBottom="@+id/buttonD4"
-        android:layout_marginLeft="15dp"
-        />
+        android:layout_marginLeft="15dp" />
 
-    <ImageButton
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonTextD4"
         android:id="@+id/buttonD4"
         android:src="@drawable/d4"
         android:background="@null"
-        android:onClick=""
         android:layout_below="@+id/textViewQuickRoll"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp" />
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonTextD6"
         android:id="@+id/buttonD6"
         android:src="@drawable/d6"
         android:background="@null"
-        android:onClick=""
         android:layout_alignBottom="@+id/buttonD4"
         android:layout_alignParentRight="true"
         android:layout_marginRight="15dp" />
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonTextD12"
         android:id="@+id/buttonD12"
         android:src="@drawable/d12"
         android:background="@null"
-        android:onClick=""
         android:layout_alignBottom="@+id/buttonD10"
         android:layout_centerHorizontal="true" />
 
@@ -94,18 +90,17 @@
         android:src="@drawable/save"
         android:background="@null" />
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonD20"
         android:src="@drawable/d20"
         android:background="@null"
-        android:onClick=""
         android:layout_alignBottom="@+id/buttonD12"
         android:layout_alignParentRight="true"
         android:layout_marginRight="15dp" />
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonD10"
@@ -311,7 +306,7 @@
         android:layout_height="wrap_content"
         android:text="@string/ButtonMinus"
         android:id="@+id/buttonD12Minus"
-        android:layout_below="@+id/textViewD12"
+        android:layout_below="@+id/textViewD20"
         android:layout_alignRight="@+id/buttonD12"
         android:layout_alignEnd="@+id/buttonD12"
         android:onClick="D12Minus"
@@ -337,13 +332,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="0"
         android:id="@+id/textViewD20"
         android:layout_below="@+id/buttonD20Plus"
         android:layout_alignParentRight="true"
         android:layout_marginRight="28dp"
         android:textSize="35dp"
-        android:textColor="#ffffffff" />
+        android:textColor="#ffffffff"
+        android:text="0" />
 
     <ImageButton
         style="?android:attr/buttonStyleSmall"
